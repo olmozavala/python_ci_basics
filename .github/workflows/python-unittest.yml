@@ -23,11 +23,11 @@ jobs:
         uses: actions/checkout@v2
       - name: Micromamba
         uses: mamba-org/provision-with-micromamba@main
-      - name: Python Syntax Checker
-        uses: cclauss/Find-Python-syntax-errors-action@v0.2.0
         with:
           environment-file: tests/environment.yml
           environment-name: myenv
+      - name: Python Syntax Checker
+        uses: cclauss/Find-Python-syntax-errors-action@v0.2.0
       - name: Unit testing
         shell: bash -l {0}
         run: |
