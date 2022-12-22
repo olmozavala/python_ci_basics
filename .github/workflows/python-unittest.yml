@@ -19,6 +19,7 @@ jobs:
         os: ["ubuntu-latest"]
         python-version: ["3.9"]
     steps:
+      - name: Checkout
       - uses: actions/checkout@v2
       - name: Python Syntax Checker
       - uses: cclauss/Find-Python-syntax-errors-action@v0.2.0
