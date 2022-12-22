@@ -15,18 +15,17 @@ def test_except():
 
 #----- Fixtures example (a way to initialize test functions) ---
 # Fixtures are used mainly to reuse code that multiple test functions may use
-
-# This function uses a fixture which is defined in conftest.py
+# This function uses a fixture which is defined in conftest.py called myfixture
 # (IT MUST BE NAMED LIKE THAT) and automatically added I don't have to import it
 def test_fix(myfixture):
     x, y = myfixture  # These values come from the fixture
     assert mySum(x, y) == 12
 
 #----- Parameterization (to test more than one thing on a function)
-@pytest.mark.parametrize("x,y,result",[
-    (1,2,3),
-    (-1, 2, 1),
-    (1, -2, -1)])
+@pytest.mark.parametrize("x,y,result",
+                     [ (1, 2, 3),   # (x,y, result)
+                       (-1, 2, 1),
+                       (1, -2, -1)])
 def testWithParams(x,y,result):
     assert mySum(x,y) == result
 
