@@ -19,8 +19,8 @@ jobs:
         os: ["ubuntu-latest"]
         python-version: ["3.9"]
     steps:
-      - uses: actions/checkout@v2
       - name: Micromamba
+      - uses: actions/checkout@v2
       - uses: mamba-org/provision-with-micromamba@main
         with:
           environment-file: tests/environment.yml
