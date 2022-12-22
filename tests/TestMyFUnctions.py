@@ -2,7 +2,7 @@ from MyFunctions import mySum, myDiv
 import pytest
 
 def test_basic():
-    assert mySum(10, 5) == 12.0
+    assert mySum(10, 5) == 15.0
 
 def test_except():
     """
